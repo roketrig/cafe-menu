@@ -1,4 +1,4 @@
-// Sayfa URL'sini QR'a dönüştür
+
 const url = window.location.href;
 
 new QRCode(document.getElementById("qrcode"), {
@@ -7,7 +7,6 @@ new QRCode(document.getElementById("qrcode"), {
   height: 200
 });
 
-// URL'den masa bilgisi al
 const path = window.location.pathname.replace("/", "");
 if (path) {
   document.getElementById("masainfo").textContent = `Masa: ${path} Menüsü`;
