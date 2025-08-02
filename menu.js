@@ -102,98 +102,98 @@ const menuData = [
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "165 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
         {
     name: "Ice Choclate Mocha",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "180 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/iced-latte.png"
   },
     {
     name: "Türk Kahvesi",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "100 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/coffee.png"
   },
     {
     name: "Double Türk Kahvesi",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "150 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/coffee.png"
   },
     {
     name: "Sıcak Çikolata",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "150 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/coffee.png"
   },
   {
     name: "Çikolata ve Çilekli Milkshake",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "190 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/milkshake.png"
   },
   {
     name: "Smoothie",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "185 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/milkshake.png"
   },
     {
     name: "Limonata",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "170 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/lemonade.png"
   },
     {
     name: "Ice Tea",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "140 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/lemonade.png"
   },
     {
     name: "Kola",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "80 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/soda-bottle.png"
   },
       {
     name: "Gazoz",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "80 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/soda-bottle.png"
   },
     {
     name: "Soda",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "60 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/soda-bottle.png"
   },
     {
     name: "Limonlu Soda",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "70 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/soda-bottle.png"
   },
     {
     name: "Churchill",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "100 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/soda-bottle.png"
   },
 
   /*
