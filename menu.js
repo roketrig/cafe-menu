@@ -4,7 +4,7 @@ const menuData = [
     category: "kahveler",
     description: "Hafif içimli, sade kahve severler için ideal.",
     price: "130 TL",
-    image: "images\americano.png"
+    image: "/images/americano.png"
   },
     {
     name: "Ice Americano",
@@ -18,84 +18,84 @@ const menuData = [
     category: "kahveler",
     description: "Yoğun çikolatalı, fırınlanmış cheesecake lezzeti.",
     price: "80 TL",
-    image: "https://www.uzaypastanesi.com/images/product/SEBASTIAN-7_26Gl.jpg"
+    image: "/images/coffee.png"
   },
     {
     name: "Double Espresso",
     category: "kahveler",
     description: "Yoğun çikolatalı, fırınlanmış cheesecake lezzeti.",
     price: "130 TL",
-    image: "https://www.uzaypastanesi.com/images/product/SEBASTIAN-7_26Gl.jpg"
+    image: "/images/coffee.png"
   },
   {
     name: "Filtre",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "130 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/americano.png"
   },
     {
     name: "Ice Filtre",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "140 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "https://cdn-icons-png.flaticon.com/512/12511/12511282.png"
   },
     {
     name: "Latte",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "150 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
       {
     name: "Ice Latte",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "160 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/iced-latte.png"
   },
     {
     name: "Flat White",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "145 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
     {
     name: "Cortado",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "140 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
     {
     name: "Cappicino",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "150 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
     {
     name: "Macchiato",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "130 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
     {
     name: "Karamel Macchiato",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "165 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
     {
     name: "Ice Karamel Macchiato",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "180 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/latte.png"
   },
     {
     name: "Mocha",
