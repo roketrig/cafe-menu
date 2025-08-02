@@ -28,14 +28,14 @@ const menuData = [
     image: "/images/coffee.png"
   },
   {
-    name: "Filtre",
+    name: "Filtre Kahve",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "130 TL",
     image: "/images/americano.png"
   },
     {
-    name: "Ice Filtre",
+    name: "Ice Filtre Kahve",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "140 TL",
@@ -70,7 +70,7 @@ const menuData = [
     image: "/images/latte.png"
   },
     {
-    name: "Cappicino",
+    name: "Cappuccino",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "150 TL",
@@ -84,14 +84,14 @@ const menuData = [
     image: "/images/latte.png"
   },
     {
-    name: "Karamel Macchiato",
+    name: "Caramel Macchiato",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "165 TL",
     image: "/images/latte.png"
   },
     {
-    name: "Ice Karamel Macchiato",
+    name: "Ice Caramel Macchiato",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "180 TL",
@@ -105,7 +105,7 @@ const menuData = [
     image: "/images/latte.png"
   },
         {
-    name: "Ice Choclate Mocha",
+    name: "Ice Chocolate Mocha",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "180 TL",
@@ -133,7 +133,7 @@ const menuData = [
     image: "/images/coffee.png"
   },
   {
-    name: "Çikolata ve Çilekli Milkshake",
+    name: "Çikolata / Çilekli Milkshake",
     category: "kahveler",
     description: "Kaşar peynirli, domatesli klasik lezzet.",
     price: "190 TL",
@@ -161,7 +161,7 @@ const menuData = [
     image: "/images/lemonade.png"
   },
     {
-    name: "Kola",
+    name: "Cola",
     category: "kahveler",
     description: "Fıstık Ezmesi, Muz, Şeftali",
     price: "80 TL",
@@ -202,14 +202,14 @@ const menuData = [
      {
     name: "Hindi Füme Sandviç",
     category: "yemekler",
-    description: "Hindi füme, Yeşillik, Kaşar, Mısır, Zeytin, Sos",
+    description: "Hindi füme, Yeşillik, Kaşar, Mısır, Zeytin, Özel Sos",
     price: "320 TL",
     image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
   },
       {
     name: "Somon Sandviç",
     category: "yemekler",
-    description: "Somon, Yeşillik, Kaşar, Mısır, Zeytin, Sos",
+    description: "Somon, Yeşillik, Kaşar, Mısır, Zeytin, Özel Sos",
     price: "380 TL",
     image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
   },
@@ -221,7 +221,7 @@ const menuData = [
     image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
   },
       {
-    name: "Peynirli Tost",
+    name: "Beyaz Peynirli Tost",
     category: "yemekler",
     description: "Beyaz Peynir, Fesleğen, Domates",
     price: "220 TL",
@@ -241,19 +241,12 @@ const menuData = [
     price: "210 TL",
     image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
   },
-  {
-    name: "Hindi Füme",
-    category: "yemekler",
-    description: "Hindi füme",
-    price: "200 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
-  },
     {
-    name: "Poğaçalar",
+    name: "Ev Yapımı Poğaça",
     category: "yemekler",
     description: "",
     price: "60 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/bakery-shop.png"
   },
 
   /*
@@ -263,7 +256,7 @@ const menuData = [
     name: "San Sebastian",
     category: "tatlılar",
     description: "Dondurma + 60 TL",
-    price: "270 TL",
+    price: "200 TL",
     image: "/images/cake.png"
   },
 
@@ -271,21 +264,14 @@ const menuData = [
     name: "Kekler",
     category: "tatlılar",
     description: "",
-    price: "160 TL",
+    price: "170 TL",
     image: "/images/cake.png"
-  },
-      {
-    name: "Dondurma",
-    category: "tatlılar",
-    description: "Sadece Tatlılar ile servis edilir.",
-    price: "60 TL",
-    image: "/images/ice-cream.png"
   },
     {
     name: "Günün Tatlısı",
     category: "tatlılar",
     description: "",
-    price: "180 TL",
+    price: "160 TL",
     image: "/images/cake.png"
   },
  
