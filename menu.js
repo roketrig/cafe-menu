@@ -4,14 +4,14 @@ const menuData = [
     category: "kahveler",
     description: "Hafif içimli, sade kahve severler için ideal.",
     price: "130 TL",
-    image: "https://cdn.shopify.com/s/files/1/2714/0802/files/americano-nasil-yapilir-tarif_480x480.jpg?v=1688990813"
+    image: "images\americano.png"
   },
     {
     name: "Ice Americano",
     category: "kahveler",
     description: "Hafif içimli, sade kahve severler için ideal.",
     price: "140 TL",
-    image: "https://cdn.shopify.com/s/files/1/2714/0802/files/americano-nasil-yapilir-tarif_480x480.jpg?v=1688990813"
+    image: "https://cdn-icons-png.flaticon.com/512/12511/12511282.png"
   },
   {
     name: "Espresso",
