@@ -264,7 +264,7 @@ const menuData = [
     category: "tatlılar",
     description: "Dondurma + 60 TL",
     price: "270 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/cake.png"
   },
 
     {
@@ -272,21 +272,21 @@ const menuData = [
     category: "tatlılar",
     description: "",
     price: "160 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/cake.png"
   },
       {
     name: "Dondurma",
     category: "tatlılar",
     description: "Sadece Tatlılar ile servis edilir.",
     price: "60 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/ice-cream.png"
   },
     {
     name: "Günün Tatlısı",
     category: "tatlılar",
     description: "",
     price: "180 TL",
-    image: "https://static.ticimax.cloud/cdn-cgi/image/width=-,quality=85/9247/uploads/urunresimleri/buyuk/kasarli-tost-dcb9.jpg"
+    image: "/images/cake.png"
   },
  
   
