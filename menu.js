@@ -2,199 +2,215 @@ const menuData = [
   {
     name: "Americano",
     category: "kahveler",
-    description: "Hafif içimli, sade kahve severler için ideal.",
+    description: "",
     price: "130 TL",
     image: "/images/americano.png"
   },
     {
     name: "Ice Americano",
     category: "kahveler",
-    description: "Hafif içimli, sade kahve severler için ideal.",
+    description: "",
     price: "140 TL",
     image: "https://cdn-icons-png.flaticon.com/512/12511/12511282.png"
   },
   {
     name: "Espresso",
     category: "kahveler",
-    description: "Yoğun çikolatalı, fırınlanmış cheesecake lezzeti.",
+    description: "",
     price: "80 TL",
     image: "/images/coffee.png"
   },
     {
     name: "Double Espresso",
     category: "kahveler",
-    description: "Yoğun çikolatalı, fırınlanmış cheesecake lezzeti.",
-    price: "130 TL",
+    description: "",
+    price: "100 TL",
     image: "/images/coffee.png"
   },
   {
     name: "Filtre Kahve",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "130 TL",
     image: "/images/americano.png"
   },
     {
     name: "Ice Filtre Kahve",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "140 TL",
     image: "https://cdn-icons-png.flaticon.com/512/12511/12511282.png"
   },
     {
     name: "Latte",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "150 TL",
     image: "/images/latte.png"
   },
       {
     name: "Ice Latte",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "160 TL",
     image: "/images/iced-latte.png"
   },
     {
     name: "Flat White",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "145 TL",
     image: "/images/latte.png"
   },
     {
     name: "Cortado",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "140 TL",
     image: "/images/latte.png"
   },
     {
     name: "Cappuccino",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "150 TL",
     image: "/images/latte.png"
   },
     {
     name: "Macchiato",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "130 TL",
     image: "/images/latte.png"
   },
     {
     name: "Caramel Macchiato",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "165 TL",
     image: "/images/latte.png"
   },
     {
     name: "Ice Caramel Macchiato",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "180 TL",
     image: "/images/latte.png"
   },
     {
     name: "Mocha",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "165 TL",
     image: "/images/latte.png"
   },
         {
     name: "Ice Chocolate Mocha",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "180 TL",
     image: "/images/iced-latte.png"
   },
     {
     name: "Türk Kahvesi",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "100 TL",
     image: "/images/coffee.png"
   },
     {
     name: "Double Türk Kahvesi",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "150 TL",
     image: "/images/coffee.png"
   },
     {
     name: "Sıcak Çikolata",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "150 TL",
     image: "/images/coffee.png"
   },
   {
-    name: "Çikolata / Çilekli Milkshake",
+    name: "Çikolatalı / Çilekli Milkshake",
     category: "kahveler",
-    description: "Kaşar peynirli, domatesli klasik lezzet.",
+    description: "",
     price: "190 TL",
     image: "/images/milkshake.png"
   },
   {
     name: "Smoothie",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
+    description: "",
     price: "185 TL",
     image: "/images/milkshake.png"
   },
     {
     name: "Limonata",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
-    price: "170 TL",
+    description: "",
+    price: "180 TL",
+    image: "/images/lemonade.png"
+  },
+     {
+    name: "Soğuk Hibiscus",
+    category: "kahveler",
+    description: "",
+    price: "180 TL",
     image: "/images/lemonade.png"
   },
     {
-    name: "Ice Tea",
+    name: "Ev Yapımı Ice Tea",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
+    description: "",
     price: "140 TL",
+    image: "/images/lemonade.png"
+  },
+        {
+    name: "Bitki Çayı",
+    category: "kahveler",
+    description: "Ihlamur, Papatya, Gül, Hibiscus, Ada Çayı, Yeşil Çay, Kış Çayı, Rezene, Anason",
+    price: "180 TL",
+    image: "/images/lemonade.png"
+  },
+  
+      {
+    name: "Churchill",
+    category: "kahveler",
+    description: "",
+    price: "80 TL",
     image: "/images/lemonade.png"
   },
     {
     name: "Cola",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
+    description: "",
     price: "80 TL",
     image: "/images/soda-bottle.png"
   },
       {
     name: "Gazoz",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
+    description: "",
     price: "80 TL",
     image: "/images/soda-bottle.png"
   },
     {
     name: "Soda",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
+    description: "",
     price: "60 TL",
     image: "/images/soda-bottle.png"
   },
     {
     name: "Limonlu Soda",
     category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
+    description: "",
     price: "70 TL",
     image: "/images/soda-bottle.png"
   },
-    {
-    name: "Churchill",
-    category: "kahveler",
-    description: "Fıstık Ezmesi, Muz, Şeftali",
-    price: "100 TL",
-    image: "/images/soda-bottle.png"
-  },
+
 
   /*
   Sanviç + Tost
@@ -255,7 +271,7 @@ const menuData = [
    {
     name: "San Sebastian",
     category: "tatlılar",
-    description: "Dondurma + 60 TL",
+    description: "Dondurma + 60 TL / Eritme Çikolata + 60 TL",
     price: "200 TL",
     image: "/images/cake.png"
   },
