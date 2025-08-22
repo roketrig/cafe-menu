@@ -280,16 +280,38 @@ const menuData = [
     name: "Kekler",
     category: "tatlılar",
     description: "",
-    price: "170 TL",
+    price: "180 TL",
     image: "/images/cake.png"
   },
-    {
-    name: "Günün Tatlısı",
+      {
+    name: "Tahinli Sütlü Muhallebi",
     category: "tatlılar",
     description: "",
     price: "160 TL",
     image: "/images/cake.png"
   },
+      {
+    name: "Vişneli Çikolatalı Islak Kek",
+    category: "tatlılar",
+    description: "",
+    price: "180 TL",
+    image: "/images/cake.png"
+  },
+    {
+    name: "Elmalı Tarçınlı Tart",
+    category: "tatlılar",
+    description: "Tatlı çeşitleri günlük olarak değişmektedir Sorunuz.",
+    price: "180 TL",
+    image: "/images/cake.png"
+  },
+      {
+    name: "Tatlı çeşitleri günlük olarak değişmektedir sorunuz.",
+    category: "tatlılar",
+    description: "",
+    price: "180 TL",
+    image: "/images/cake.png"
+  },
+
  
   
 ];
