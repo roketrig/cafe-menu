@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  
+
   <style>
     :root {
       --primary-color: #c27e35;
@@ -23,7 +23,11 @@
       --radius: 16px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Segoe UI', 'Roboto', sans-serif;
@@ -55,9 +59,9 @@
     }
 
     .main-logo {
-      max-height: 175px; 
+      max-height: 175px;
       width: auto;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
       transition: var(--transition);
     }
 
@@ -65,69 +69,185 @@
       transform: scale(1.05);
     }
 
-    #masainfo { font-size: 2.2rem; font-weight: 700; margin-bottom: 5px; }
+    #masainfo {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
 
     .category-buttons {
-      display: flex; justify-content: center; padding: 25px 20px;
-      background-color: var(--light-color); border-bottom: 1px solid var(--gray-medium);
-      flex-wrap: wrap; gap: 15px;
+      display: flex;
+      justify-content: center;
+      padding: 25px 20px;
+      background-color: var(--light-color);
+      border-bottom: 1px solid var(--gray-medium);
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     .category-btn {
-      padding: 12px 24px; background-color: white; border: 1px solid var(--gray-medium);
-      border-radius: 50px; font-weight: 600; color: var(--secondary-color);
-      cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 8px;
+      padding: 12px 24px;
+      background-color: white;
+      border: 1px solid var(--gray-medium);
+      border-radius: 50px;
+      font-weight: 600;
+      color: var(--secondary-color);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .category-btn.active {
-      background-color: var(--primary-color); border-color: var(--primary-color);
-      color: white; transform: scale(1.05);
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: white;
+      transform: scale(1.05);
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .menu-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px; padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 30px;
     }
 
     .menu-item {
-      background-color: white; border-radius: var(--radius); overflow: hidden;
-      border: 1px solid var(--gray-light); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-      transition: var(--transition); opacity: 0; animation: fadeInUp 0.5s ease forwards;
+      background-color: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--gray-light);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      transition: var(--transition);
+      opacity: 0;
+      animation: fadeInUp 0.5s ease forwards;
     }
 
-    .menu-item:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
 
-    .item-image { height: 200px; overflow: hidden; position: relative; }
-    .item-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
-    .menu-item:hover .item-image img { transform: scale(1.1); }
+    .item-image {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .item-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .menu-item:hover .item-image img {
+      transform: scale(1.1);
+    }
 
     .item-category-tag {
-      position: absolute; top: 15px; right: 15px; background-color: rgba(194, 126, 53, 0.9);
-      color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; backdrop-filter: blur(4px);
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: rgba(194, 126, 53, 0.9);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
     }
 
-    .item-info { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-    .item-info h3 { font-size: 1.25rem; color: var(--secondary-color); margin-bottom: 8px; }
-    .item-description { color: var(--gray-dark); font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1; }
-    .item-footer { border-top: 1px solid var(--gray-light); padding-top: 12px; display: flex; justify-content: flex-end; }
-    .item-price { font-size: 1.3rem; font-weight: 800; color: var(--primary-color); }
-    .item-price::after { content: " TL"; font-size: 0.9rem; margin-left: 2px; }
+    .item-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .item-info h3 {
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      margin-bottom: 8px;
+    }
+
+    .item-description {
+      color: var(--gray-dark);
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .item-footer {
+      border-top: 1px solid var(--gray-light);
+      padding-top: 12px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .item-price {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary-color);
+    }
+
+    .item-price::after {
+      content: " TL";
+      font-size: 0.9rem;
+      margin-left: 2px;
+    }
 
     /* QR Bölümü */
-    .qr-container { padding: 40px 20px; text-align: center; background: var(--light-color); border-top: 1px solid var(--gray-medium); }
-    #qrcode { display: inline-block; padding: 15px; background: white; border-radius: 12px; box-shadow: var(--shadow); }
+    .qr-container {
+      padding: 40px 20px;
+      text-align: center;
+      background: var(--light-color);
+      border-top: 1px solid var(--gray-medium);
+    }
 
-    footer { text-align: center; padding: 30px; color: var(--gray-dark); font-size: 0.9rem; }
+    #qrcode {
+      display: inline-block;
+      padding: 15px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--gray-dark);
+      font-size: 0.9rem;
+    }
 
     @media (max-width: 600px) {
-      body { padding: 10px; }
-      .menu-grid { padding: 15px; grid-template-columns: 1fr; }
-      .category-btn { flex: 1; min-width: 120px; justify-content: center; }
+      body {
+        padding: 10px;
+      }
+
+      .menu-grid {
+        padding: 15px;
+        grid-template-columns: 1fr;
+      }
+
+      .category-btn {
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -162,7 +282,7 @@
   <script>
     const url = window.location.href;
     new QRCode(document.getElementById("qrcode"), {
-      text: url, width: 160, height: 160, colorDark : "#2c3e50", colorLight : "#ffffff"
+      text: url, width: 160, height: 160, colorDark: "#2c3e50", colorLight: "#ffffff"
     });
 
     const path = window.location.pathname.replace("/", "");
@@ -170,310 +290,310 @@
       document.getElementById("masainfo").textContent = `Masa: ${path} Menüsü`;
     }
 
-const menuData = [
-  {
-    name: "Americano",
-    category: "kahveler",
-    description: "Yoğun Aromalı Klasik Americano",
-    price: "160",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Ice Americano",
-    category: "kahveler",
-    description: "Buzlu Americano, Ferahlatıcı Lezzet",
-    price: "170",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Espresso",
-    category: "kahveler",
-    description: "Yoğun Ve Keskin Espresso",
-    price: "110",
-    image: "https://images.unsplash.com/photo-1596952954288-16862d37405b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Double Espresso",
-    category: "kahveler",
-    description: "Çift Shot Espresso, Ekstra Yoğun",
-    price: "130",
-    image: "https://images.unsplash.com/photo-1596952954288-16862d37405b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Filtre Kahve",
-    category: "kahveler",
-    description: "Taze Çekirdeklerden Damlatma Filtre Kahve",
-    price: "160",
-    image: "https://images.unsplash.com/photo-1728383561273-77d94572790c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Ice Filtre Kahve",
-    category: "kahveler",
-    description: "Buzlu Filtre Kahve, Yaz İçin İdeal",
-    price: "170",
-    image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Latte",
-    category: "kahveler",
-    description: "Bol Sütlü Yumuşak Latte",
-    price: "180",
-    image: "https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Ice Latte",
-    category: "kahveler",
-    description: "Buzlu Latte, Yaz İçin Mükemmel",
-    price: "190",
-    image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Flat White",
-    category: "kahveler",
-    description: "İnce Köpüklü, Yoğun Flat White",
-    price: "170",
-    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Cortado",
-    category: "kahveler",
-    description: "Eşit Oranda Espresso Ve Ilık Süt",
-    price: "165",
-    image: "https://images.unsplash.com/photo-1519532059956-a63a37af5deb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29ydGFkb3xlbnwwfHwwfHx8MA%3D%3D"
-  },
-  {
-    name: "Cappuccino",
-    category: "kahveler",
-    description: "Bol Köpüklü Klasik Cappuccino",
-    price: "180",
-    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Macchiato",
-    category: "kahveler",
-    description: "Espresso Üzerine Süt Köpüğü",
-    price: "170",
-    image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Mocha",
-    category: "kahveler",
-    description: "Çikolata Ve Kahvenin Mükemmel Uyumu",
-    price: "190",
-    image: "https://plus.unsplash.com/premium_photo-1668970851336-6c81cc888ba7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9jaGF8ZW58MHx8MHx8fDA%3D"
-  },
-  {
-    name: "Ice Chocolate Mocha",
-    category: "kahveler",
-    description: "Buzlu Çikolatalı Mocha",
-    price: "200",
-    image: "https://media.istockphoto.com/id/1400793713/photo/cafe-mocha-with-whip-cream.webp?a=1&b=1&s=612x612&w=0&k=20&c=8LSqKs045WzcuTDTPrjGOndjpuzOYXphNDM8tEAPhpw="
-  },
-  {
-    name: "Türk Kahvesi",
-    category: "kahveler",
-    description: "Geleneksel Türk Kahvesi",
-    price: "130",
-    image: "https://plus.unsplash.com/premium_photo-1670684184188-bd6ce82fd366?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHVya2lzaCUyMGNvZmZlfGVufDB8fDB8fHww"
-  },
-  {
-    name: "Double Türk Kahvesi",
-    category: "kahveler",
-    description: "Çift Doz Geleneksel Türk Kahvesi",
-    price: "180",
-    image: "https://plus.unsplash.com/premium_photo-1670684184188-bd6ce82fd366?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHVya2lzaCUyMGNvZmZlfGVufDB8fDB8fHww"
-  },
-  {
-    name: "Sıcak Çikolata",
-    category: "kahveler",
-    description: "Bol Kremalı Sıcak Çikolata",
-    price: "200",
-    image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwY2hvY2xhdGV8ZW58MHx8MHx8fDA%3D"
-  },
-  {
-    name: "Sahlep",
-    category: "kahveler",
-    description: "",
-    price: "200",
-    image: "https://odulbufe.com/wp-content/uploads/2021/08/Sahlep.jpg"
-  },
-  {
-    name: "Çikolatalı / Çilekli / Karamelli Milkshake",
-    category: "kahveler",
-    description: "Çikolatalı Veya Çilekli Ferahlatıcı Milkshake",
-    price: "220",
-    image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Limonata",
-    category: "kahveler",
-    description: "Ev Yapımı Taze Limonata",
-    price: "180",
-    image: "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGVtb25hZGV8ZW58MHx8MHx8fDA%3D"
-  },
-  {
-    name: "Smoothie",
-    category: "kahveler",
-    description: "Taze Meyvelerle Hazırlanan Smoothie",
-    price: "240",
-    image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Soğuk Hibiscus",
-    category: "kahveler",
-    description: "Ferahlatıcı Soğuk Hibiscus Çayı",
-    price: "220",
-    image: "https://images.unsplash.com/photo-1667592157294-815a7f162679?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhpYmlzY3VzJTIwZHJpbmt8ZW58MHx8MHx8fDA%3D"
-  },
-  {
-    name: "Ev Yapımı Ice Tea",
-    category: "kahveler",
-    description: "Taze Demlenmiş Ev Yapımı Buzlu Çay",
-    price: "180",
-    image: "https://plus.unsplash.com/premium_photo-1664392087859-815b337c3324?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aWNlJTIwdGVhfGVufDB8fDB8fHww"
-  },
-  {
-    name: "Bitki Çayı",
-    category: "kahveler",
-    description: "Ihlamur, Papatya, Adaçayı, Yeşil Çay, Kış Çayı, Hibiskus, Yasemin Ve Gül Çayı Seçenekleri",
-    price: "210",
-    image: "https://images.unsplash.com/photo-1562547256-2c5ee93b60b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlYXxlbnwwfHwwfHx8MA%3D%3D"
-  },
-  {
-    name: "Churchill",
-    category: "kahveler",
-    description: "Özel Churchill Karışımı",
-    price: "100",
-    image: "https://images.unsplash.com/photo-1621330716555-5cad596c4562?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVtb24lMjBzb2RhfGVufDB8fDB8fHww"
-  },
-  {
-    name: "Cola",
-    category: "kahveler",
-    description: "Soğuk Cola",
-    price: "100",
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Gazoz",
-    category: "kahveler",
-    description: "Klasik Gazoz",
-    price: "100",
-    image: "https://ardenmarket.com.tr/media/catalog/product/cache/ce320e98947e5c83f08a8e256dc8423e/n/i/ni_de_gazoz_250_ml.jpg"
-  },
-  {
-    name: "Soda",
-    category: "kahveler",
-    description: "Maden Sodası",
-    price: "80",
-    image: "https://productimages.hepsiburada.net/s/32/375-375/10364946645042.jpg"
-  },
-  {
-    name: "Limonlu Soda",
-    category: "kahveler",
-    description: "Taze Limonlu Soda",
-    price: "90",
-    image: "https://buryani.com/wp-content/uploads/2023/01/LIMONLU-SODA.jpeg"
-  },
-  {
-    name: "Su",
-    category: "kahveler",
-    description: "",
-    price: "50",
-    image: "https://images.unsplash.com/photo-1523362628745-0c100150b504?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Çay",
-    category: "kahveler",
-    description: "",
-    price: "50",
-    image: "https://plus.unsplash.com/premium_photo-1674406481284-43eba097a291?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVhfGVufDB8fDB8fHww"
-  },
-  {
-    name: "Hindi Füme Sandviç",
-    category: "yemekler",
-    description: "Hindi Füme, Yeşillik, Kaşar, Cheddar, Mısır, Zeytin, Özel Sos",
-    price: "380",
-    image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Somon Sandviç",
-    category: "yemekler",
-    description: "Somon, Yeşillik, Kaşar, Cheddar, Mısır, Zeytin, Özel Sos",
-    price: "440",
-    image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Karışık Sandviç",
-    category: "yemekler",
-    description: "Jambon, Macar Salam, Hindi Salam, Kaşar, Cheddar, Yeşillik, Mısır , Zeytin Ve Özel Sos",
-    price: "440",
-    image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Cheddar ve Kaşarlı Tost",
-    category: "yemekler",
-    description: "Cheddar Ve Kaşar: Çeri Domates, Çengelköy Salatalık Ve Kapya Biber İle Servis Edilir",
-    price: "230",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Kaşarlı Tost",
-    category: "yemekler",
-    description: "Bol Kaşarlı Tost: Çeri Domates, Çengelköy Salatalık Ve Kapya Biber İle Servis Edilir",
-    price: "190",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Hindi Füme Tost",
-    category: "yemekler",
-    description: "Hindi Füme, Kaşar: Çeri Domates, Çengelköy Salatalık Ve Kapya Biber İle Servis Edilir",
-    price: "240",
-    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Ev Yapımı Poğaça",
-    category: "yemekler",
-    description: "Taze Yapılmış Ev Poğaçası",
-    price: "70",
-    image: "https://plus.unsplash.com/premium_photo-1720070416636-0e5ef67d3862?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "San Sebastian",
-    category: "tatlılar",
-    description: "Sıcak Eritme Çikolata / 1 Top Dondurma 70 TL",
-    price: "260",
-    image: "https://rihtimpastaneleri.com/images/product/untitled-capture19023_jdvp.jpg"
-  },
-  {
-    name: "Muhallebili Limonlu Alman Pastası",
-    category: "tatlılar",
-    description: "",
-    price: "260",
-    image: "https://www.ardaninmutfagi.com/wp-content/uploads/2024/07/alman-pastasi-t3.jpg"
-  },
-  {
-    name: "Cup Tatlı Çeşitleri",
-    category: "tatlılar",
-    description: "",
-    price: "220",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Brownie",
-    category: "tatlılar",
-    description: "",
-    price: "300",
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    name: "Tatlı çeşitleri",
-    category: "tatlılar",
-    description: "Tatlı Çeşitlerimiz Günlük Olarak Değişmektedir Lütfen Sorunuz...",
-    price: "",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
-  }
-];
-   
+    const menuData = [
+      {
+        name: "Americano",
+        category: "kahveler",
+        description: "Yoğun Aromalı Klasik Americano",
+        price: "160",
+        image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Ice Americano",
+        category: "kahveler",
+        description: "Buzlu Americano, Ferahlatıcı Lezzet",
+        price: "170",
+        image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Espresso",
+        category: "kahveler",
+        description: "Yoğun Ve Keskin Espresso",
+        price: "110",
+        image: "https://images.unsplash.com/photo-1596952954288-16862d37405b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Double Espresso",
+        category: "kahveler",
+        description: "Çift Shot Espresso, Ekstra Yoğun",
+        price: "130",
+        image: "https://images.unsplash.com/photo-1596952954288-16862d37405b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Filtre Kahve",
+        category: "kahveler",
+        description: "Taze Çekirdeklerden Damlatma Filtre Kahve",
+        price: "160",
+        image: "https://images.unsplash.com/photo-1728383561273-77d94572790c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Ice Filtre Kahve",
+        category: "kahveler",
+        description: "Buzlu Filtre Kahve, Yaz İçin İdeal",
+        price: "170",
+        image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Latte",
+        category: "kahveler",
+        description: "Bol Sütlü Yumuşak Latte",
+        price: "180",
+        image: "https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Ice Latte",
+        category: "kahveler",
+        description: "Buzlu Latte, Yaz İçin Mükemmel",
+        price: "190",
+        image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Flat White",
+        category: "kahveler",
+        description: "İnce Köpüklü, Yoğun Flat White",
+        price: "170",
+        image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Cortado",
+        category: "kahveler",
+        description: "Eşit Oranda Espresso Ve Ilık Süt",
+        price: "165",
+        image: "https://images.unsplash.com/photo-1519532059956-a63a37af5deb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29ydGFkb3xlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        name: "Cappuccino",
+        category: "kahveler",
+        description: "Bol Köpüklü Klasik Cappuccino",
+        price: "180",
+        image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Macchiato",
+        category: "kahveler",
+        description: "Espresso Üzerine Süt Köpüğü",
+        price: "170",
+        image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Mocha",
+        category: "kahveler",
+        description: "Çikolata Ve Kahvenin Mükemmel Uyumu",
+        price: "190",
+        image: "https://plus.unsplash.com/premium_photo-1668970851336-6c81cc888ba7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9jaGF8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        name: "Ice Chocolate Mocha",
+        category: "kahveler",
+        description: "Buzlu Çikolatalı Mocha",
+        price: "200",
+        image: "https://media.istockphoto.com/id/1400793713/photo/cafe-mocha-with-whip-cream.webp?a=1&b=1&s=612x612&w=0&k=20&c=8LSqKs045WzcuTDTPrjGOndjpuzOYXphNDM8tEAPhpw="
+      },
+      {
+        name: "Türk Kahvesi",
+        category: "kahveler",
+        description: "Geleneksel Türk Kahvesi",
+        price: "130",
+        image: "https://plus.unsplash.com/premium_photo-1670684184188-bd6ce82fd366?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHVya2lzaCUyMGNvZmZlfGVufDB8fDB8fHww"
+      },
+      {
+        name: "Double Türk Kahvesi",
+        category: "kahveler",
+        description: "Çift Doz Geleneksel Türk Kahvesi",
+        price: "180",
+        image: "https://plus.unsplash.com/premium_photo-1670684184188-bd6ce82fd366?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHVya2lzaCUyMGNvZmZlfGVufDB8fDB8fHww"
+      },
+      {
+        name: "Sıcak Çikolata",
+        category: "kahveler",
+        description: "Bol Kremalı Sıcak Çikolata",
+        price: "200",
+        image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwY2hvY2xhdGV8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        name: "Sahlep",
+        category: "kahveler",
+        description: "",
+        price: "200",
+        image: "https://odulbufe.com/wp-content/uploads/2021/08/Sahlep.jpg"
+      },
+      {
+        name: "Çikolatalı / Çilekli / Karamelli Milkshake",
+        category: "kahveler",
+        description: "Çikolatalı Veya Çilekli Ferahlatıcı Milkshake",
+        price: "220",
+        image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Limonata",
+        category: "kahveler",
+        description: "Ev Yapımı Taze Limonata",
+        price: "180",
+        image: "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGVtb25hZGV8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        name: "Smoothie",
+        category: "kahveler",
+        description: "Taze Meyvelerle Hazırlanan Smoothie",
+        price: "240",
+        image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Soğuk Hibiscus",
+        category: "kahveler",
+        description: "Ferahlatıcı Soğuk Hibiscus Çayı",
+        price: "220",
+        image: "https://images.unsplash.com/photo-1667592157294-815a7f162679?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhpYmlzY3VzJTIwZHJpbmt8ZW58MHx8MHx8fDA%3D"
+      },
+      {
+        name: "Ev Yapımı Ice Tea",
+        category: "kahveler",
+        description: "Taze Demlenmiş Ev Yapımı Buzlu Çay",
+        price: "180",
+        image: "https://plus.unsplash.com/premium_photo-1664392087859-815b337c3324?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aWNlJTIwdGVhfGVufDB8fDB8fHww"
+      },
+      {
+        name: "Bitki Çayı",
+        category: "kahveler",
+        description: "Ihlamur, Papatya, Adaçayı, Yeşil Çay, Kış Çayı, Hibiskus, Yasemin Ve Gül Çayı Seçenekleri",
+        price: "210",
+        image: "https://images.unsplash.com/photo-1562547256-2c5ee93b60b7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlYXxlbnwwfHwwfHx8MA%3D%3D"
+      },
+      {
+        name: "Churchill",
+        category: "kahveler",
+        description: "Özel Churchill Karışımı",
+        price: "100",
+        image: "https://images.unsplash.com/photo-1621330716555-5cad596c4562?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGVtb24lMjBzb2RhfGVufDB8fDB8fHww"
+      },
+      {
+        name: "Cola",
+        category: "kahveler",
+        description: "Soğuk Cola",
+        price: "100",
+        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Gazoz",
+        category: "kahveler",
+        description: "Klasik Gazoz",
+        price: "100",
+        image: "https://ardenmarket.com.tr/media/catalog/product/cache/ce320e98947e5c83f08a8e256dc8423e/n/i/ni_de_gazoz_250_ml.jpg"
+      },
+      {
+        name: "Soda",
+        category: "kahveler",
+        description: "Maden Sodası",
+        price: "80",
+        image: "https://productimages.hepsiburada.net/s/32/375-375/10364946645042.jpg"
+      },
+      {
+        name: "Limonlu Soda",
+        category: "kahveler",
+        description: "Taze Limonlu Soda",
+        price: "90",
+        image: "https://buryani.com/wp-content/uploads/2023/01/LIMONLU-SODA.jpeg"
+      },
+      {
+        name: "Su",
+        category: "kahveler",
+        description: "",
+        price: "50",
+        image: "https://images.unsplash.com/photo-1523362628745-0c100150b504?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Çay",
+        category: "kahveler",
+        description: "",
+        price: "50",
+        image: "https://plus.unsplash.com/premium_photo-1674406481284-43eba097a291?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVhfGVufDB8fDB8fHww"
+      },
+      {
+        name: "Hindi Füme Sandviç",
+        category: "yemekler",
+        description: "Hindi Füme, Yeşillik, Kaşar, Cheddar, Mısır, Zeytin, Özel Sos",
+        price: "380",
+        image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Somon Sandviç",
+        category: "yemekler",
+        description: "Somon, Yeşillik, Kaşar, Cheddar, Mısır, Zeytin, Özel Sos",
+        price: "440",
+        image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Karışık Sandviç",
+        category: "yemekler",
+        description: "Jambon, Macar Salam, Hindi Salam, Kaşar, Cheddar, Yeşillik, Mısır , Zeytin Ve Özel Sos",
+        price: "440",
+        image: "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Cheddar ve Kaşarlı Tost",
+        category: "yemekler",
+        description: "Cheddar Ve Kaşar: Çeri Domates, Çengelköy Salatalık Ve Kapya Biber İle Servis Edilir",
+        price: "230",
+        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Kaşarlı Tost",
+        category: "yemekler",
+        description: "Bol Kaşarlı Tost: Çeri Domates, Çengelköy Salatalık Ve Kapya Biber İle Servis Edilir",
+        price: "190",
+        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Hindi Füme Tost",
+        category: "yemekler",
+        description: "Hindi Füme, Kaşar: Çeri Domates, Çengelköy Salatalık Ve Kapya Biber İle Servis Edilir",
+        price: "240",
+        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Ev Yapımı Poğaça",
+        category: "yemekler",
+        description: "Taze Yapılmış Ev Poğaçası",
+        price: "70",
+        image: "https://plus.unsplash.com/premium_photo-1720070416636-0e5ef67d3862?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "San Sebastian",
+        category: "tatlılar",
+        description: "Sıcak Eritme Çikolata / 1 Top Dondurma 70 TL",
+        price: "260",
+        image: "https://rihtimpastaneleri.com/images/product/untitled-capture19023_jdvp.jpg"
+      },
+      {
+        name: "Muhallebili Limonlu Alman Pastası",
+        category: "tatlılar",
+        description: "",
+        price: "260",
+        image: "https://www.ardaninmutfagi.com/wp-content/uploads/2024/07/alman-pastasi-t3.jpg"
+      },
+      {
+        name: "Cup Tatlı Çeşitleri",
+        category: "tatlılar",
+        description: "",
+        price: "220",
+        image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        name: "Brownie",
+        category: "tatlılar",
+        description: "",
+        price: "300",
+        image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
+        name: "Tatlı çeşitleri",
+        category: "tatlılar",
+        description: "Tatlı Çeşitlerimiz Günlük Olarak Değişmektedir Lütfen Sorunuz...",
+        price: "",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+      }
+    ];
+
     const menuGrid = document.getElementById('menu-grid');
     const btns = document.querySelectorAll('.category-btn');
 
@@ -495,10 +615,10 @@ const menuData = [
           </div>
           <div class="item-info">
             <h3>${item.name}</h3>
-            <p class="item-description">${item.description}</p>
-            <div class="item-footer">
+                        <div class="item-footer">
               <div class="item-price">${item.price}</div>
             </div>
+            <p class="item-description">${item.description}</p>
           </div>
         `;
         menuGrid.appendChild(div);
@@ -516,4 +636,5 @@ const menuData = [
     });
   </script>
 </body>
+
 </html>
